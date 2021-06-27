@@ -1,17 +1,6 @@
-﻿/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Fichero de interfaz «cesar.h» de un módulo que declara
- *          una función denominada «cifrar» que facilita la labor de
- *          cifrar y descifrar el contenido de un fichero solicitado al usuario.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
+# pragma once
 
-#ifndef CESAR_H_INCLUDED
-#define CESAR_H_INCLUDED
-
-#include "pedir-nombre-fichero.h"
+# include "pedir-nombre-fichero.h"
 
 /*
  *  Pre:  ---
@@ -49,5 +38,3 @@ void descifrar(const char fichero_rutaOrigen[], const char fichero_rutaDestino[]
  *        posiciones en el código ASCII para cifrar el fichero.
  */
 void cambiarLetras(char& caracter, int& claveDes);
-
-#endif // CESAR_H_INCLUDED
