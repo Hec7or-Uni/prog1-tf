@@ -1,17 +1,7 @@
-/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Módulo principal de un programa interactivo dirigido por menú
- *          que permite al usuario cifrar, descifrar y analizar las
- *          probabilidades de descifrado de un fichero de texto.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
-
-#include <iostream>
-#include "analisis-cesar.h"
-#include "cesar.h"
-#include "pedir-nombre-fichero.h"
+# include <iostream>
+# include "analisis-cesar.h"
+# include "cesar.h"
+# include "pedir-nombre-fichero.h"
 
 using namespace std;
 
