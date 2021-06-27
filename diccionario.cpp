@@ -10,10 +10,10 @@
  * Codificación de caracteres original de este fichero: UTF-8 sin BOM
 \****************************************************************************/
 
-#include <iostream>
-#include <fstream>
-#include <cstring>
-#include "diccionario.h"
+# include <iostream>
+# include <fstream>
+# include <cstring>
+# include "diccionario.h"
 using namespace std;
 
 const int MAX_LONG_PALABRA = 30;
