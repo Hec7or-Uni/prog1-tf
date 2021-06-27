@@ -1,19 +1,9 @@
-/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Fichero de implementación «analisis-cesar.cpp» que define una
- *          función denominada «analisisCesar», que calcula la probabilidad
- *          de funcionamiento de una determinada clave de cifrado.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
-
-#include <iostream>
-#include <cstring>
-#include <iomanip>
-#include "cesar.h"
-#include "analisis-cesar.h"
-#include "diccionario.h"
+# include <iostream>
+# include <cstring>
+# include <iomanip>
+# include "cesar.h"
+# include "analisis-cesar.h"
+# include "diccionario.h"
 
 using namespace std;
 
