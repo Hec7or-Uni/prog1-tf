@@ -1,18 +1,8 @@
-﻿/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Fichero de implementación «cesar.cpp» que define una
- *          función denominada «cifrar», que cifra un fichero de texto
- *          con una clave proporcionada por el usuario o lo descifra.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
-
-#include <iostream>
-#include <fstream>
-#include "pedir-nombre-fichero.h"
-#include "cesar.h"
-#include "analisis-cesar.h"
+# include <iostream>
+# include <fstream>
+# include "pedir-nombre-fichero.h"
+# include "cesar.h"
+# include "analisis-cesar.h"
 
 using namespace std;
 
