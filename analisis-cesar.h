@@ -1,16 +1,4 @@
-/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Fichero de interfaz «analisis-cesar.h» de un módulo que declara
- *          una función denominada «analisisCesar» que facilita la labor de
- *          calcular la probabilidad de descifrar el contenido de un fichero
- *          solicitado al usuario.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
-
-#ifndef ANALISIS_CESAR_H_INCLUDED
-#define ANALISIS_CESAR_H_INCLUDED
+# pragma once
 
 const int MAX_NUM_PROBABILIDADES = 26;
 
@@ -47,5 +35,3 @@ void analisisCesar(const char fichero_cifrado[], const char fichero_pwdTest[],
  *        de sus probabilidades de descifrado.
  */
 void ordenarAnalisis (probabilidad caso[]);
-
-#endif // ANALISIS_CESAR_H_INCLUDED
