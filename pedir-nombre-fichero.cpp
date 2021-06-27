@@ -1,18 +1,6 @@
-/****************************************************************************\
- * Curso de Programación 1. Práctica 6 y trabajo obligatorio
- * Autor: Héctor Toral Pallás
- * Ultima revisión: 10 de enero de 2020
- * Resumen: Fichero de implementación «pedir-nombre-fichero.cpp» que declara
- *          una función denominada «pedirNombreFichero» que facilita la labor de
- *          convertir el nombre de un fichero solicitado al usuario en una ruta de
- *          acceso relativa al directorio de ejecución del proyecto solicitado 
- *          en esta tarea y en la siguiente.
- * Codificación de caracteres original de este fichero: UTF-8 sin BOM
-\****************************************************************************/
-
-#include <iostream>
-#include <cstring>
-#include "pedir-nombre-fichero.h"
+# include <iostream>
+# include <cstring>
+# include "pedir-nombre-fichero.h"
 
 using namespace std;
 
