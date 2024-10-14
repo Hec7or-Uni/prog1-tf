@@ -47,8 +47,8 @@ void cifrar(const char fichero_rutaOrigen[], const char fichero_rutaDestino[],
             int& claveDes, int& operacion) {
     ifstream D;
     ofstream R;
-    D.open(fichero_rutaOrigen);                                     // ../../datos/fichero/
-    R.open(fichero_rutaDestino);                                    // ../../resultados/fichero/
+    D.open(fichero_rutaOrigen);                                     // datos/fichero/
+    R.open(fichero_rutaDestino);                                    // resultados/fichero/
     
     if ((D.is_open()) && (R.is_open())) {
         char caracter;                                              // Dato a ser cifrado.

@@ -35,39 +35,39 @@ using namespace std;
  *          - la extensión del fichero leído del teclado.
  */
 void pedirNombreFichero(const char mensaje[], const char interfijo[],
-                        char rutaOrigen[], char rutaDestino[]){
+                        char rutaOrigen[], char rutaDestino[]) {
     cout << mensaje;
+    
     char nombreFichero[MAX_LONG_NOMBRE_FICHERO];
     cin >> nombreFichero;
+
+    // Inicializar variables para el nombre base y la extensión
+    char ficheroNombre[MAX_LONG_NOMBRE_FICHERO] = "";
+    char ficheroExtension[MAX_LONG_NOMBRE_FICHERO] = "";
+
+    // Buscar el punto (.) que separa el nombre base de la extensión
+    char *punto = strchr(nombreFichero, '.');
     
-    //SEPARACION DE NOMBRE.
-    char ficheroNombre[MAX_LONG_NOMBRE_FICHERO];
-    char ficheroExtension[MAX_LONG_NOMBRE_FICHERO];
-    
-    int DIM_FICHERO = strlen(nombreFichero);
-    //NOMBRE.
-    int i = 0;
-    while (nombreFichero[i] != '.') {
-        ficheroNombre[i] = nombreFichero[i];
-        i++;
+    if (punto != nullptr) {
+        // Copiar el nombre base
+        strncpy(ficheroNombre, nombreFichero, punto - nombreFichero);
+        ficheroNombre[punto - nombreFichero] = '\0'; // Agregar fin de cadena
+        
+        // Copiar la extensión incluyendo el punto
+        strcpy(ficheroExtension, punto);
+    } else {
+        // Si no hay punto, todo el nombreFichero es el nombre base
+        strcpy(ficheroNombre, nombreFichero);
     }
-    ficheroNombre[i] = '\0';
-    //EXTENSIÓN.
-    int o = 0;
-    while (o + i < DIM_FICHERO) {
-        ficheroExtension[o] = nombreFichero[o+i];
-        o++;
-    }
-    ficheroExtension[i] = '\0';
-    
-    //rutaOrigen
-    strcpy(rutaOrigen, DIR_DATOS);              //  ../../datos/
-    strcat(rutaOrigen, ficheroNombre);          //  ../../datos/NOMfichero
-    strcat(rutaOrigen, ficheroExtension);       //  ../../datos/NOMfichero.EXTfichero
-    
-    //rutaDestino
-    strcpy(rutaDestino, DIR_RESULTADOS);        //  ../../resultados/
-    strcat(rutaDestino, ficheroNombre);         //  ../../resultados/NOMfichero
-    strcat(rutaDestino, interfijo);             //  ../../resultados/NOMfichero-cifrado
-    strcat(rutaDestino, ficheroExtension);      //  ../../resultados/NOMfichero-cifrado.EXTfichero
+
+    // Construir rutaOrigen: DIR_DATOS + nombre base + extensión
+    strcpy(rutaOrigen, DIR_DATOS);              //  datos/
+    strcat(rutaOrigen, ficheroNombre);          //  datos/NOMfichero
+    strcat(rutaOrigen, ficheroExtension);       //  datos/NOMfichero.EXTfichero
+
+    // Construir rutaDestino: DIR_RESULTADOS + nombre base + interfijo + extensión
+    strcpy(rutaDestino, DIR_RESULTADOS);        //  resultados/
+    strcat(rutaDestino, ficheroNombre);         //  resultados/NOMfichero
+    strcat(rutaDestino, interfijo);             //  resultados/NOMfichero-interfijo
+    strcat(rutaDestino, ficheroExtension);      //  resultados/NOMfichero-interfijo.EXTfichero
 }

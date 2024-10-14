@@ -14,8 +14,8 @@
 #define PEDIR_NOMBRE_FICHERO_H_INCLUDED
 
 const int MAX_LONG_NOMBRE_FICHERO = 200;
-const char DIR_DATOS[] = "../../datos/";
-const char DIR_RESULTADOS[] = "../../resultados/";
+const char DIR_DATOS[] = "datos/";
+const char DIR_RESULTADOS[] = "resultados/";
 
 /*
  * Pre:  «rutaOrigen» y «rutaDestino» tienen una dimensión suficiente como
@@ -54,8 +54,8 @@ const char DIR_RESULTADOS[] = "../../resultados/";
  * la cadena "-cifrado". Cuando se haya ejecutado la función, si el usuario ha
  * escrito en el teclado "quijote.txt", el valor asignado al argumento 
  * correspondiente al parámetro de salida «rutaOrigen» será
- * "../../datos/quijote.txt" y, el valor asignado al argumento correspondiente al
- * parámetro de salida «rutaDestino» será "../../resultados/quijote-cifrado.txt".
+ * "datos/quijote.txt" y, el valor asignado al argumento correspondiente al
+ * parámetro de salida «rutaDestino» será "resultados/quijote-cifrado.txt".
  */
 void pedirNombreFichero(const char mensaje[], const char interfijo[],
                         char rutaOrigen[], char rutaDestino[]);
